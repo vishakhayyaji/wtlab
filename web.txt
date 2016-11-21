@@ -1,0 +1,853 @@
+1.Develop and demonstrate a XHTML document that illustrates the use external style sheet, ordered list, table, borders, padding, color and the<span> tag.
+1.html
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML1.1//EN"
+"http://www.w3.org/TR/xhtml1.1/DTD/xhtml//dtd">
+<html xmlns="htp://www.w3.org/1999/xhtml">
+<head>
+   <link rel="stylesheet"  type"text/css"  href="1.css"/>
+   <title>first program</title>
+</head>
+<body>
+     <p><h3>for span</h3></p>
+     <p>my mother has<span class="brown">light brown</span>eyes</p>
+     <p>my mother has<span class="green">light green</span>eyes</p>
+<br/>
+<br/>
+<p><h3>for ordered list</h3></p>
+<p>type upper-roman</p>
+<ol class="upper-roman">
+    <li>coffee</li>
+    <li>tea</li>
+    <li>cool drinks</li>
+</ol>
+</br><br/>
+<p>for upper-alpha type</p>
+<ol class="upper-alpha">
+    <li>coffee</li>
+    <li>tea</li>
+    <li>cool drinks</li>
+</ol>
+</br><br/>
+<p>type decimal</p>
+<ol class="decimal">
+     <li>coffee</li>
+     <li>tea</li>
+     <li>cool drinks</li>
+</ol>
+</br><br/>
+<p>type lower-roman</p>
+<ol class="lower-roman">
+    <li>coffee</li>
+    <li>tea</li>
+    <li>cool drinks</li>
+</ol>
+</br><br/>
+
+<p>for low-alpha type</p>
+<ol class="lower-alpha">
+    <li>coffee</li>
+    <li>tea</li>
+    <li>cool drinks</li>
+</ol>
+</br><br/>
+
+<p><h3>for table</h3></p>
+<table border="5">
+<caption>fruit juice drinks</caption>
+<tr>
+    <th> </th>
+    <th class="red">apple</th>
+    <th class="orange">orange</th>
+    <th class="grey">screw driver</th>
+</tr>
+<tr>
+    <th class="red">breakfast</th>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+</tr>
+<tr>
+    <th class="orange">lunch</th>
+              <td>1</td>
+	<td>0</td>
+	<td>0</td>
+</tr>
+<tr>
+       <th class="grey">dinner</th>
+	<td>0</td>
+	<td>0</td>
+	<td>1</td>
+</tr>
+</table>
+<p><h3> for padding</h3></p>
+<p class="one">welcome to ait</p>
+<p class="two">welcome to ait</p>
+<p class="three">welcome to ait</p>
+<p class="four">welcome to ait</p>
+<p class="five">welcome to ait</p>
+</body>
+</html>
+
+1.css
+span.brown{color:brown;font-weight:bold;}
+span.green{color:darkolivegreen;font-weight:bold;}
+ol.upper-roman{list-style-type:upper-roman;}
+ol.lower-roman{list-style-type:lower-roman;}
+ol.decimal{list-style-type:decimal;}
+ol.lower-alpha{list-style-type:lower-alpha;}
+ol.upper-alpha{list-style-type:upper-alpha;}
+table{border-top-width:medium;
+	border-bottom-width:thick;
+	border-top-color:red;
+	border-bottom-color:blue;
+	border-top-style:dotted;
+	border-top-style:dashed;}
+th.grey{color:grey;}
+th.orange{color:orange;}
+th.red{color:red;}
+p.one{margin:0.2in;padding:0.2in;background-color:silver;border-style:dashed;}
+p.two{margin:0.1in;padding:0.1in;background-color:grey;border-style:solid;}
+p.three{margin:0.3in;padding:0.2in;background-color:lime;border-style:dashed;}
+p.four{margin:0.4in;background-color:navy;}
+p.five{padding:0.4in;background-color:aqua;}
+	
+ 
+
+ 
+
+
+ 
+ 
+2. Develop and demonstrate a XHTML file that includes JavaScript script for the following problems:
+ a)   Input:   A number n obtained using prompt
+       Output: The first n Fibonacci numbers
+ b)  Input:     A number n obtained using prompt
+     Output: A table of numbers from 1 to n and their squares using alert
+2a.html
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<!--2a.html-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+   function fun(str)
+   {
+var num=Number(str);
+var i=0,j=1,k,count;
+      	if(num==0)
+document.write("<h3>"+"No number"+"</h3>");
+      	else if(num==1)
+      	{
+            document.write("<h3>"+"The Fibonacci series is as follows.."+"</h3>");
+document.write(i);
+           }
+        else
+          {
+document.write("<h3>"+"The Fibonacci series is as follows.."+"</h3>");
+document.write(i);
+document.write(","+j);
+           		for(count=2;count<num;count++)
+           		{  
+               		k=i+j;
+i=j;
+               		j=k;
+document.write(","+k);
+           		}
+        	}
+   }
+</script>
+</head>
+<body>
+<script type="text/javascript">
+var input_str=prompt("Enter the Limits","");
+if(input_str=="")
+{
+    	alert("Please enter a valid number");
+input_str=prompt("Enter the Limits","");
+}
+fun(input_str);
+</script>
+</body>
+</html>
+ 
+ 
+
+2b.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<!-- 2b.html -->
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+<title> 2b program </title>
+</head>
+<body>
+<script type ="text/javascript">
+var num = prompt("Enter a number : \n","");
+if(num>0 && num != null) 
+{
+	msgstr="Number and its squares are \n";
+	for( i = 1; i<= num; i++ )
+	{
+		msgstr = msgstr + i + " -" + i*i + "\n";
+	}
+	alert(msgstr);
+}
+else
+	alert("No input supplied");
+</script>
+</body>
+</html>
+
+ 
+
+
+ 
+
+
+3. Develop and demonstrate a XHTML file that includes JavaScript script that uses functions for the following problems:
+  a)   Parameter: A string
+        Output: The position in the string of the left-most vowel
+  b)   Parameter: A number
+        Output: The number with its digits in the reverse order
+3a.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<!-- 3a.html -->
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+<title>Pattern Matching using Regular Expression</title>
+<script type = "text/javascript">
+  function TestString(str)
+  {		
+	document.write("The given string is ");
+	document.write("<em>"+str+"</em>"+"<br/>");
+	var i = str.match(/[aeiouAEIOU][a-zA-Z]*/);
+	return i;
+  }
+</script>
+</head>
+<body>
+<h3>
+<script type ="text/javascript">
+	var input_str = prompt("Enter some string here","");
+	p = TestString(input_str);
+	document.write("The leftmost vowel is found at index"+p.index);
+</script>
+</h3>
+</body>
+</html>
+ 
+ 
+
+3b.html
+<?xml version ="1.0" encoding ="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reverse of a number</title>
+<script type ="text/javascript">
+ var result;
+
+function reverser(num) 
+{
+	var digit,position = 0;
+	//if the number has just one digit,that's it
+	if (num < 10)
+		return num;
+	//Get the first digit
+	result = num % 10;
+	num = Math.floor(num / 10);
+	
+	//Looping to produce the result for reset
+	do {
+		digit = num % 10;
+		result = 10 * result + digit;
+		num = Math.floor(num /10);
+	    } while (num >= 1);
+	    return result;
+}
+</script>
+</head>
+<body>
+<script type ="text/javascript">
+var num1;
+num1 = prompt("Enter the number","");
+result = reverser(num1);
+document.write("The reverse of"+ num1+" is:" + result +"<br />");
+</script>
+</body>
+</html>
+
+
+ 
+
+ 
+4.a) Develop and demonstrate, using JavaScript script, a XHTML document that collects the USN ( the valid format is: A digit from 1 to 4 followed by two upper-case characters followed by two digits followed by two upper-case characters followed by three digits; no embedded spaces allowed) of the user. Event handler must be included for the form element that collects this information to validate the input. Messages in the alert windows must be produced when errors are detected.
+b) Modify the above program to get the current semester also (restricted to be a number from 1 to 8)
+4a.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title>4a Program</title>
+<script type = "text/javascript">
+  function validate_usn()
+  {
+	var str  = document.getElementById("usn");
+	var result = str.value.search(/^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/i);
+	if( result != 0)
+	{
+		alert("invalid USN");
+	}
+	else
+	{
+		alert("valid USN");
+	}
+  }
+</script>
+</head>
+<body >
+<form id ="form1" >
+<h3>Enter your USN</h3>
+<input type ="text" id ="usn"/>
+<br />
+<br />
+<input type ="button" onclick ="validate_usn();"value ="submit" />
+<input type ="reset" value ="reset"/>
+</form>
+</body>
+</html>
+
+ 
+ 
+
+ 
+
+
+4b.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title>Pattern Matching using Regular Expression</title>
+<script type = "text/javascript">
+  function validate_usn()
+  {
+	var str1 = document.getElementById("usn");
+	var valid_usn = str1.value.search(/^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/i);
+	var str2 = document.getElementById("semi");
+	var valid_sem = str2.value.search(/^[1-8]{1}$/);
+	if( valid_usn>= 0 && valid_sem>= 0 )
+	{
+		alert("Valid USN and Semester");
+	}
+	else if( valid_usn< 0 && valid_sem>= 0 )
+	{
+		alert("invalid USN");
+	}
+	else if( valid_usn>= 0 && valid_sem< 0 )
+	{
+		alert("invalid Semester");
+	}
+	else
+	{
+		alert("invalid USN and Semester");
+	}
+  }
+</script>
+</head>
+<body>
+<form id ="form1">
+Enter your USN:<input type ="text" id ="usn"/>
+<br \>
+<br\>
+Enter Your Semester:<input type ="text" id ="semi"/>
+<br/>
+<input type ="button" value="Submit" name ="submit"  onclick="validate_usn();"/>
+<input type ="reset" value = "Reset" name ="reset"/>
+</form>
+</body>
+</html>
+
+ 
+ 
+
+ 
+
+ 
+5.a) Develop and demonstrate, using JavaScript script, a XHTML document that  contains three   short  paragraphs of text, stacked on top of each other, with only enough of each showing so that the mouse cursor can be placed over some part of  them. When the cursor is placed over the exposed part of any paragraph, it should rise to the top to become completely visible.
+b) Modify the above document so that when a paragraph is moved from the top stacking position, it returns to its original position rather than to the bottom.
+5a.css
+ .text1
+{
+padding:1em;
+width:500px;
+position:absolute;
+top:100px;
+left:200px;
+border:solid thick black;
+background-color:pink;
+}	
+
+.text2
+{
+border:solid thick black;
+padding:1em;
+width: 500px;
+position:absolute;
+top:120px;
+ left:230px;
+background-color:yellow;
+}
+
+.text3
+{
+position:absolute;
+top:140px;
+left:270px;
+border:solid thick black;
+background-color:cyan;
+padding: 1 em;
+width: 500px;
+}
+
+5a.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<!-- 5a.html -->
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+<title>Stacking the elements</title>
+<link rel ="stylesheet" type ="text/css" href="5a.css"/>
+<script type="text/javascript">
+  //one of the layer is taken as default
+  var topLayer = "third";
+  function my_fun(toTop)
+  {
+	var oldTop=document.getElementById(topLayer).style;
+	var newTop=document.getElementById(toTop).style;
+	oldTop.zIndex = "0";
+	newTop.zIndex = "100";
+	topLayer =document.getElementById(toTop).id;
+  }
+</script>
+</head>
+<body>
+<span class = "text1" id = "first" onmouseover="my_fun(id);">This is a story about four people;Everybody, Somebody,Anybody,andNobody.There was an important job to be done and Everybody was asked to do it.Everbody was sure Sombody would do it.                       </span>
+<span class ="text2" id = "second" onmouseover="my_fun(id);">once upon a time, there lived a big lion in a jungle.Every day  he hunted and killed many animals to satisfy his hunger.The animals were worried that oneday none of them would be left alive.                  </span>
+<span class = "text3" id = "third" onmouseover="my_fun(id);">Dassera is one of the most important Hindu festival.It is the festival that celeberates the victory of lord Rama over Ravana of lanka.on this day, Rama had killed Ravana who had abducted Rama's wife sita to the kindom of Lanka.                                                                                                         </span>
+</body>
+</html>
+ 
+ 
+ 
+5b.html
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<!—5b.html -->
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+<title>Stacking the elements</title>
+<link rel ="stylesheet" type ="text/css" href="5a.css"/>
+<script type="text/javascript">
+//one of the layer is taken as default
+var topLayer = "third";
+var origPos;
+function my_fun(toTop,pos)
+{
+	//var oldTop=document.getElementById(topLayer).style;
+	Var newTop=document.getElementById(toTop).style;
+	//oldTop.zIndex = "0";
+	newTop.zIndex = "10";
+	topLayer =document.getElementById(toTop).id;
+	origPos = pos;	
+}	
+function my_fun1()
+{
+	document.getElementById(topLayer).style.zIndex = origPos;
+}
+</script>
+</head>
+<body>
+<span class = "text1" id = "first" onmouseover="my_fun('first','1')" onmouseout="my_fun1();">This is a story about four people, Everybody, Somebody,Anybody,andNobody.There was an important job to be done and Everybody was asked to do it.Everbody was sure Somebody would do it.                                                 </span>
+<span class ="text2" id = "second" onmouseover="my_fun('second','2')" onmouseout="my_fun1();">once upon a time, there lived a big lion in a jungle.Every day  he hunted and killed many animals to satisfy his hunger.The animals were worried that oneday none of them would be left alive.                                                                                      </span>
+<span class = "text3" id = "third" onmouseover="my_fun('third','3')" onmouseout="my_fun1();">Dassera is one of the most important Hindu festival.It is the festival that celeberates the victory of lord Rama over Ravana of lanka.on this day, Rama had killed Ravana who had abducted Rama's wife sita to the kindom of Lanka.                           
+</span>
+</body>
+</html>
+ 
+
+ 
+
+6.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>
+            JavaScript form validation - Password Checking - 1
+   </title>
+    <link rel="stylesheet" href="6.css" type="text/css"/>
+   <script type="text/javascript">
+     function CheckPassword(inputtxt) 
+  { 
+         var passw= /^[A-Za-z]\w{7,14}$/;
+         if(inputtxt.value.match(passw)) 
+  { 
+       alert('Correct, try another...');
+       return true;
+  }
+else
+ { 
+     alert('Wrong...!');
+     return false;
+  }
+}
+   </script>
+</head>
+<body onload="document.form1.text1.focus()">
+<div class="mail">
+ <h2>Input Password and Submit [7 to 15 characters which contain only characters, numeric digits, underscore and first character must be a letter]</h2>
+ <form name="form1" action="#">
+<ul>
+     <li><input type="text" name="text1"/></li> 
+     <li class="rq">*Enter numbers only</li>
+     <li>&nbsp;</li>
+
+     <li class="submit"><input type="button" name="submit" value="Submit" onclick="CheckPassword(document.form1.text1)"/></li>
+     <li>&nbsp;</li>
+</ul>
+</form>
+</div>
+</body>
+</html>
+6)Develop and demonstrate ,using JavaScript script ,a xhtml document that collects the password(the valid format is:7 to 16 characters which contain only characters, numeric digits, underscore and first character must be a letter, no embedded space allowed) of the user .Event handler must be included for the form element that collects this information to validate the input. Message in the alertwindows must be produced when errors are detected.
+6.css
+li 
+ {list-style-type: none;
+font-size: 16pt;
+  }
+.mail
+ {
+   margin: auto;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: 400px;
+   background : #D8F1F8;
+   border: 1px soild silver;
+}
+.mail h2
+ {
+    margin-left: 38px;
+}
+input 
+  {
+font-size: 20pt;
+  }
+input:focus;
+textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 12pt;
+}
+.rq {
+color: #FF0000;
+font-size: 10pt;
+}
+  
+
+7. a) Design an XML document to store information about a student in an engineering college affiliated to VTU. The information must include USN, Name, Name of the College, Brach, Year of Joining, and e-mail id. Make up sample data for 3 students. Create a CSS style sheet and use it to display the document.
+ b) Create an XSLT style sheet for one student element of the above document and use it to create a display of that element.
+stud.css
+Student
+{
+	font-family:arial;
+	color:red;
+	font-size:10pt;
+}
+StudentInfo
+{
+	font-family:”times new roman”;
+	color:blue;
+	font-size:14pt;
+}
+USN
+{
+	font-family:arial;
+	color:green;
+	font-size:12pt;
+}
+
+Name
+{
+	font-family:arial;
+	color:magenta;
+}
+
+College,Branch,Year_of_Join,Email
+{
+	display:block;
+	font-family:”times new roman”;
+	color:black;
+	font-size:10pt;
+}
+6a.xml
+<?xml version = "1.0" encoding ="UTF-8"?>
+<?xml-stylesheet type ="text/css" href ="stud.css"?>
+<Student>
+	<StudentInfo>
+		<USN>1DA12CS001</USN>
+		<Name>Amar</Name>
+		<College>Dr.AIT</College>
+		<Branch>CSE</Branch>
+		<Year_of_Join>2012</Year_of_Join>
+		<Email>amar@dr_ait.org</Email>
+	</StudentInfo>
+<StudentInfo>
+<USN>1DA12CS078</USN>
+<Name>Rashmi</Name>
+<College>Dr.AIT</College>
+<Branch>CSE</Branch>
+<Year_of_Join>2012</Year_of_Join>
+<Email>rashmi@dr_ait.org</Email>
+</StudentInfo>
+<StudentInfo>
+<USN>1DA12CS119</USN>
+<Name>Varsha</Name>
+<College>Dr.AIT</College>
+<Branch>CSE</Branch>
+<Year_of_Join>2012</Year_of_Join>
+<Email>varsha@dr_ait.org</Email>
+</StudentInfo>
+</Student>
+ 
+6b.xml
+<?xml version="1.0" encoding ="utf-8"?>
+<? xml-stylesheet type ="text/xsl" href ="stu.xsl"?>
+<Student>
+	<StudentInfo>
+		<USN>1DA12CS068</USN>
+		<Name>Gokul</Name>
+		<College>DR.AIT</College>
+		<Branch>CSE</Branch>
+		<Year_Of_Join>2012</Year_Of_Join>
+		<Email>Suriya@dr_ait.org</Email>
+	</StudentInfo>
+</Student>
+
+stu.xsl
+<?xml version = "1.0" encoding ="utf-8"?>
+<xsl:stylesheet version=”1.0” xmlns:xsl=http://www.w3.org/1999/XSL/Transform>
+<xsl:template match=”/”>
+<html>	
+<body>
+	<h2>Student Database</h2>
+	<table border=”1”>
+		<tr bgcolor=”gray”>
+			<th>USN</th>
+			<th>Name</th>
+			<th>College</th>
+			<th>Branch</th>
+			<th>Year_of_Join</th>
+			<th>Email</th>
+		</tr>
+	<xsl:for-each select=”Student/StudentInfo”>
+		<tr bgcolor=”pink”>
+			<td><xsl:value-of select=”USN”/></td>
+			<td><xsl:value-of select=”Name”/></td>
+			<td><xsl:value-of select=”College”/></td>
+			<td><xsl:value-of select=”Branch”/></td>
+			<td><xsl:value-of select=”Year_of_Join”/></td>
+			<td><xsl:value-of select=”Email”/></td>
+		</tr>
+	</xsl:for-each>
+	</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+ 
+9.a) Write a PHP program to store current date-time in a COOKIE and display the ‘Last visited on’ date-time on   the web page upon reopening of the same page.
+b) Write a PHP program to store page views count in SESSION, to increment the count on each refresh, and to show the count on web page.
+9.php
+<?php
+$onemm=60*60*24*30+time();
+setcookie('Visit',date("d/m/y-g:i:s"),$onemm);
+print "cookie is set!!!";
+if(isset($_COOKIE['Visit']))
+{
+  	$Visit_val=$_COOKIE['Visit'];
+}
+else
+{
+   	echo "This is not the desired use of cookies!";
+}
+echo "last visited on ".$Visit_val;
+?>	
+
+ 
+
+9b.php
+<?php
+session_start(); 
+
+if (isset($_SESSION[‘views’))  
+{ 
+    	$_SESSION[‘views’] = $_SESSION[‘views’]+1; 
+ }  
+else
+{
+    	$_SESSION[‘views’]=1;
+}
+echo "This web page view count is:”.$_SESSION[‘views’]; 
+?>
+
+ 
+
+10. Create a XHTML form with Name, Address Line 1, Address Line 2, and E-mail text fields. On submitting, store the values in MySQL table. Retrieve and display the data based on Name. (using php)
+
+10a.php
+
+<?php
+$mysql=mysql_connect("localhost","root","")
+or die("could not connect to mqsql");
+$name=$_GET["name"];
+$address1=$_GET["add1"];
+$address2=$_GET["add2"];
+$email=$_GET["email"];
+mysql_db_query("student1","INSERT INTO student(name,add1,add2,email) VALUES('$name','$address1','$address2','$email')")
+	 or die("query failed");
+$result=mysql_query("SELECT * FROM student1")
+	 or die(mysql_error());
+?>
+<html>
+<head>
+<title> To insert data </title>
+<body>
+<table border="1">
+<tr>
+	<th> name </th>
+	<th> address1 </th>
+	<th> address2 </th>
+	<th> email </th>
+</tr>
+<?php
+while($array=mysql_fetch_array($result))
+{
+  	print "<tr>";
+  	print "<td>" . $array["name"] . "</td>";
+  	print "<td>" . $array["add1"] . "</td>";
+  	print "<td>" . $array["add2"] . "</td>";
+  	print "<td>" . $array["email"] . "</td>";
+  	print "</tr>";
+}
+mysql_free_result($result);
+mysql_close($mysql);
+?>
+</table>
+<br />
+<br />
+<p> for searching based on name </p>
+<a href="http://localhost/10b.html"> for searching form </a><br /><br />
+<a href="http://localhost/10a.html">for inserting </a>
+</body>
+</html>
+
+10b.php
+<?php
+ $mysql=mysql_connect("localhost","root","") or die("could not connect to mysql1");
+mysql_select_db("student1") or die("select failed-".mysql_errno(). " : " . mysql_error());
+ $name_to_search=$_GET["name"];
+ $result=mysql_query("SELECT * FROM student WHERE name='$name_to_search'")
+ or die("query failed");
+ ?>			
+<html>
+<head><title>Search data record </title></head>
+<body>
+<table border=”1”>
+<tr>
+	<th>Name</th>
+	<th>Address1</th>
+	<th>Address2</th>
+	<th>Email</th>
+</tr>
+<?
+  while($array=mysql_fetch_array($result))
+{
+       print "<tr>";
+       print "<td>".$array["name"]."</td>";
+       print "<td>".$array["add1"]."</td>";
+       print "<td>".$array["add2"]."</td>"; 
+       print "<td>".$array["email"]."</td>";
+       print "</tr>";
+  }
+mysql_free_result($result);
+mysql_close($mysql);
+ ?>
+</table></body></html>
+
+
+10a.html
+
+<?xml version ="1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Accessing databases</title>
+</head>
+<body>
+	<form action="http://localhost/php/10a.php" method="GET">
+	<label>Enter your name:<br />
+		<input type="text" name="name" size=40/>
+	</label><br />
+	<label>enter your address line1:
+	<br /><input type="text" name="add1" size=40/>
+	</label>
+	<br />
+	<label>enter your address line2:
+	<br /><input type="text" name="add2" size=40/>
+	</label>
+	<br />
+	<label>enter your emailid:
+	<br/><input type="text" name="email" size=40/>
+	</label>
+	</br>
+	<input type="submit" value="submit"/>
+	<input type="reset" value="reset"/>
+	</form>
+</body>
+</html>
+
+10b.html
+<?xml version ="1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+http://www.w3.org/TR/xhtml11/DTD/XHTML11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>	
+<title>To search the Database </title>
+</head>
+<body>
+<form action="http://localhost/php/10b.php" method="GET">
+<label>Enter your name:<br/>
+<input type="text" name="name" size=40/>
+</label>
+<br />
+<label>
+<br />
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</label>
+</form>
+</body>
+</html>
+
