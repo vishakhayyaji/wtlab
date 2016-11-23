@@ -307,6 +307,13 @@ Toast.makeText(this, "No Id Exist", 15000).show();
 }
 }
 
+
+
+
+
+
+
+
  2. Write a program to create an activity with a text box and three buttons (save, open
 and create) open must allow to browse the text file from sdcard and must display the
 contents of the file on textbox, save button must save the contents of text box to file,
@@ -570,6 +577,12 @@ writeToFile(filepath, filename);
 }
 }
 }
+
+
+
+
+
+
 
  3. Write a program to create an activity with two text boxes (date /time and note
 contents). Create a content provider to store the date and time and note contents to
@@ -955,6 +968,12 @@ Toast.LENGTH_LONG).show();
 }
 }
 
+
+
+
+
+
+
  4. Create a program to create an activity with two buttons start and stop. On pressing
 start button the program must start the counter and must keep on counting until stop
 button is pressed.
@@ -1097,6 +1116,11 @@ i++;
 }
 }
 
+
+
+
+
+
  5. Create a program to receive the incoming SMS to the phone and put a notification on
 screen, on clicking the notification it must display sender number and message
 content on screen. (Broadcast Receiver)
@@ -1225,6 +1249,11 @@ break;
 }
 }
 }
+
+
+
+
+
 
  6. Create a program to create a service that will put a notification on the screen every 5
 seconds.
@@ -1442,6 +1471,11 @@ hand.sendEmptyMessage(i++);
 }
 }
 }
+
+
+
+
+
 
  7. Create an .aidl service to do add, subtraction and multiplication and create another
 application with two buttons to read the inputs and three button add,subtract and
